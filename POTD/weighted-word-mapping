@@ -1,0 +1,28 @@
+#include <vector>
+#include <string>
+
+class Solution {
+public:
+    std::string mapWordWeights(std::vector<std::string>& words, std::vector<int>& weights) {
+        std::string result = "";
+        
+        for (const std::string& word : words) {
+            int total_weight = 0;
+            
+            // 1. Sum up the custom weights of all characters in the word
+            for (char c : word) {
+                total_weight += weights[c - 'a']; // 'c - 'a' converts 'a'-'z' to a 0-25 index
+            }
+            
+            // 2. Modulo 26 ensures the value falls strictly within the alphabet range
+            int remainder = total_weight % 26;
+            
+            // 3. Map to reverse alphabet order using ASCII arithmetic (0 -> 'z', 1 -> 'y', etc.)
+            char mapped_char = 'z' - remainder;
+            
+            result += mapped_char;
+        }
+        
+        return result;
+    }
+};
