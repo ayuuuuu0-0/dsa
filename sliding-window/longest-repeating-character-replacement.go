@@ -31,3 +31,24 @@ func characterReplacement(s string, k int) int {
 	}
 	return maxLen
 }
+
+// class Solution {
+// public:
+//     int lengthOfLongestSubstring(string s) {
+//         int left = 0, right= 0, maxlen = 0;
+
+//         int countArr[256] = {0};
+
+//         while (right < s.length()){
+//             countArr[s[right]]++;
+
+//             while (countArr[s[right]] > 1){
+//                 countArr[s[left]]--;
+//                 left++;
+//             }
+//             maxlen = max(maxlen, right - left + 1);
+//             right++;
+//         }
+//         return maxlen;
+//     }
+// };
