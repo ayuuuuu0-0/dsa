@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceRoot}/<your program>",
+      "args": [],
+      "cwd": "${workspaceRoot}"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/ayush/project/dsa/strings",
+      "program": "/Users/ayush/project/dsa/strings/build/Debug/outDebug"
+    }
+  ]
+}
