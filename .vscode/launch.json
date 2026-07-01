@@ -14,8 +14,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ayush/project/dsa/strings",
-      "program": "/Users/ayush/project/dsa/strings/build/Debug/outDebug"
+      "cwd": "/Users/ayush/project/dsa/array",
+      "program": "/Users/ayush/project/dsa/array/build/Debug/outDebug"
     }
   ]
 }
