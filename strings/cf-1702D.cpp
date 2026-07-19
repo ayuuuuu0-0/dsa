@@ -3,19 +3,25 @@
 using namespace std;
 
 int main(){
-    int t;
-    cin>>t;
+    int testCases;
+    cin>>testCases;
 
-    while(t--){
-        string s;
-        cin >> s;
+    while(testCases--){
+        string word;
+        cin >> word;
 
+        int maxSize;
+        cin >> maxSize;
 
-        vector<int>pos[26];
+        int totalSize = 0;
 
-        for(int i=0; i<s.size(); i++){
-            int ch = s[i] - 'a';
-            pos[ch].push_back(i);
+        vector<int>position[26];
+
+        for(int i=0; i<word.size(); i++){
+            int character = word[i] - 'a';
+            position[character].push_back(i);
+
+            totalCost += character + 1;
         }
 
         int sum = 0;
@@ -24,7 +30,7 @@ int main(){
             sum = sum + ch - 'a' + 1;
         }
 
-        for(int c=25; c>=0; c--){
+        for(int c=25; c>=0; c+--){
             int idx = pos[c].back();
             pos[c].pop_back();
         }
