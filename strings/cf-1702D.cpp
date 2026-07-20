@@ -24,7 +24,7 @@ int main(){
             totalCost += character + 1;
         }
 
-        int sum = 0;
+        int sum = 0;  
 
         for(char ch: s){
             sum = sum + ch - 'a' + 1;
