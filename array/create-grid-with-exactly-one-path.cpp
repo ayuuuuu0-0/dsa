@@ -1,0 +1,28 @@
+#include <vector>
+#include <string>
+
+using namespace std;
+
+class Solution
+{
+public:
+    vector<string> createGrid(int m, int n)
+    {
+        // Initialize grid filled with walls ('#')
+        vector<string> grid(m, string(n, '#'));
+
+        // Open the entire first row
+        for (int j = 0; j < n; ++j)
+        {
+            grid[0][j] = '.';
+        }
+
+        // Open the entire last column
+        for (int i = 0; i < m; ++i)
+        {
+            grid[i][n - 1] = '.';
+        }
+
+        return grid;
+    }
+};
